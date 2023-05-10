@@ -169,7 +169,7 @@ const Page = () => (
               EDB Postgres Tuner
             </IndexCardLink>
 
-            <IndexCardLink to="/epas/latest/language_pack">
+            <IndexCardLink to="/language_pack/latest">
               Language Pack
             </IndexCardLink>
           </IndexCard>
