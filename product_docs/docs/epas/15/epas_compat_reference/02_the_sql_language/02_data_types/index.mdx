@@ -8,7 +8,18 @@ legacyRedirectsGenerated:
 
 <div id="data_types" class="registered_link"></div>
 
-EDB Postgres Advanced Server provides a number of Oracle-compatible data types to help with migration. For those data types that correspond to PostgreSQL data types, EDB Postgres Advanced Server provides an alias that can be used directly in place of the equivalent Oracle type. EDB Postgres Advanced Server also supports a few data types that don't apply to Postgres databases, but are available in Oracle. 
+EDB Postgres Advanced Server (EPAS) provides a number of Oracle-compatible data types to help with migration.  This table lists the EPAS data types you can use in place of the associated Oracle data type. Except where noted in the description, the data types are available in both Postgres mode and Oracle-compatibility mode.
+
+!!!tip
+   The values in the EPAS data type column are links to the description of EPAS's implementation of the data type.
+
+| Oracle data type    | EPAS data type                         | Description                                                                                                                                                                                                                                                          |   
+|---------------------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `BINARY_DOUBLE`     | [`DOUBLE PRECISION`](01_numeric_types) | The EPAS `DOUBLE PRECISION` data type is a native PostgreSQL data type that maps to Oracle's `BINARY_DOUBLE` data type. See [Floating Point Types](https://www.postgresql.org/docs/15/datatype-numeric.html#DATATYPE-FLOAT) in the PostgreSQL documentation.             |   
+| `BINARY_FLOAT`      | [`FLOAT`](01_numeric_types)            | The EPAS `FLOAT` data type is an alias of PostgreSQL's `DOUBLE PRECISION` data type that maps to Oracle's `BINARY_FLOAT` data type. See [Floating Point Types](https://www.postgresql.org/docs/15/datatype-numeric.html#DATATYPE-FLOAT) in the PostgreSQL documentation. |   
+| `ROWID`             | [`ROWID`](01_numeric_types)            | The EPAS `ROWID` data type that maps to Oracle's `ROWID` data type. It is a custom data type of EPAS and isn't available in PostgreSQL. This data type is only available in Oracle-compatibility mode.                                                                                                                              |                                                                                                                                                                                                                                                                   |   |   |   |   |
+
+Nidhi's version:
 
 | EPAS data type                             | Oracle data type |  Description    |
 | ------------------------------------------- | ----------------- | --------------------------------------------|
@@ -16,15 +27,6 @@ EDB Postgres Advanced Server provides a number of Oracle-compatible data types t
 | [`FLOAT`](01_numeric_types)                 |  `BINARY_FLOAT`   | The EPAS `FLOAT` data type is an alias of PostgreSQL's `DOUBLE PRECISION` data type that maps to Oracle's `BINARY_FLOAT` data type. See [DOUBLE PRECISION](https://www.postgresql.org/docs/15/datatype-numeric.html#DATATYPE-FLOAT) in the PostgreSQL documentation. |
 | [`NUMBER (p[,s])`](01_numeric_types)        |  `NUMBER(p [, s ] )` | The EPAS `NUMBER` data type is an alias of PostgreSQL's `NUMERIC` data type that maps to Oracle's `NUMBER` data type. See [NUMERIC](https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-NUMERIC-DECIMAL) in the PostgreSQL documentation. |
 | [`ROWID`](01_numeric_types)                 | `ROWID`              | The EPAS `ROWID` data type that maps to Oracle's `ROWID` data type. It is a custom data type of EPAS and isn't available in PostgreSQL.   |
-
-
-
-
-
-
-
-
-
 
 
 | Oracle data types                  | PostgreSQL data types                                                                                | EPAS Oracle mode <br/> (PostgreSQL alias)                       | EPAS Postgres mode <br/> (PostgreSQL alias) |
