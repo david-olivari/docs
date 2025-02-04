@@ -103,9 +103,13 @@ Install the EDB Clone Schema on any database to be used as the source or target 
 1.  Install the extensions. Make sure that you create the `parallel_clone` extension before creating the `edb_cloneschema` extension.
 
   ```sql
-  CREATE EXTENSION parallel_clone SCHEMA public;
+ppas_wfm=# CREATE EXTENSION edb_cloneschema ;
+CREATE EXTENSION
+ppas_wfm=# CREATE EXTENSION parallel_clone ;
+CREATE EXTENSION
+ppas_wfm=# 
 
-  CREATE EXTENSION edb_cloneschema;
+
   ```
 
 ## Creating log directory
